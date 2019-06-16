@@ -12,3 +12,15 @@
 // 8. However, if your store _does_ have enough of the product, you should fulfill the customer's order.
 //    * This means updating the SQL database to reflect the remaining quantity.
 //    * Once the update goes through, show the customer the total cost of their purchase.
+
+// Require mySQL node package
+var mysql = require('mysql');
+
+// Link to mySQL Database
+var connection = mysql.createConnection({
+    host: "localhost",
+    port: 8889,
+    user: "root", //Your username
+    password: "root", //Your password
+    database: "bamazon_DB"
+});
