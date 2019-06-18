@@ -4,7 +4,9 @@
   "description": "Node.js &amp; MySQL",
   "main": "bamazonCustomer.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "watch": "nodemon server.js"
   },
   "repository": {
     "type": "git",
@@ -17,6 +19,9 @@
   },
   "homepage": "https://github.com/anniezoyinlee/bamazon#readme",
   "dependencies": {
-    "mysql": "^2.17.1"
+    "console.table": "^0.10.0",
+    "inquirer": "^6.3.1",
+    "mysql": "^2.17.1",
+    "nodemon": "^1.19.1"
   }
 }
