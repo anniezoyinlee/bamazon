@@ -21,8 +21,7 @@ CREATE TABLE products (
 
 -- Populate this database with around 10 different products. (i.e. Insert "mock" data rows into this database and table). --
 INSERT INTO products (product_name, department_name, price, stock_quantity)
-VALUES  
-		('Apple', 'Fruit', 0.35, 200),
+VALUES  ('Apple', 'Fruit', 0.35, 200),
 		('Baby Wipes', 'Children', 2.50, 400),
 		('Band Aid', 'Pharmacy', 3.00, 250),
 		('Banana', 'Fruit', 0.25, 100),
