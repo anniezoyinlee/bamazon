@@ -16,24 +16,25 @@ var connection = mysql.createConnection({
 // Connect to mySQL database
 connection.connect(function (err) {
     if (err) throw err;
-    getProductList();
+    displayProducts();
 });
 
-function getProductList() {
+function displayProducts() {
     connection.query("SELECT * FROM products", function (err, res) {
         if (err) reject(err);
         console.table(res);
-        buyProduct()
+        purchasePrompt()
     });
 };
 
-function buyProduct() {
+function purchasePrompt() {
     // The app should prompt users with two messages.
     return inquirer.prompt([{
         // The first should ask them the ID of the product they would like to buy.
         name: 'product_id',
         message: 'What is the ID of the product you would like to buy?',
         type: 'input',
+        filter: Number,
         validate: function (value) {
             if (isNaN(value) === false) {
                 return true;
@@ -47,6 +48,7 @@ function buyProduct() {
         name: 'number_of_units',
         message: 'How many units would you like to buy?',
         type: 'input',
+        filter:Number, 
         validate: function (value) {
             if (isNaN(value) === false) {
                 return true;
@@ -57,7 +59,7 @@ function buyProduct() {
         }
     }]).then(function (answer) {
         return new Promise(function (resolve, reject) {
-            // query for all items in products table where the item_id is what was chosen
+            // Query for all items in products table where the item_id is what was chosen
             connection.query("SELECT * FROM products WHERE item_id=?", answer.product_id, function (err, res) {
                 if (err) reject(err);
                 resolve(res);
@@ -89,7 +91,7 @@ function buyProduct() {
                     if (err) reject(err);
                     // Once the update goes through, show the customer the total cost of their purchase.
                     console.log('Your total cost is $' + totalCost);
-                    getProductList()
+                    displayProducts()
                 });
             } else {
                 console.log(object);

@@ -21,20 +21,22 @@ CREATE TABLE products (
 
 -- Populate this database with around 10 different products. (i.e. Insert "mock" data rows into this database and table). --
 INSERT INTO products (product_name, department_name, price, stock_quantity)
-VALUES  ('Dove Shampoo', 'Cosmetics', 5.75, 500),
-		('Dove Conditioner', 'Cosmetics', 6.25, 627),
-		('Glad 12 Gal Trash Bags', 'Grocery', 5.99, 300),
-		('Brawny Paper Towels', 'Grocery', 4.25, 400),
-		('Granny Smith Apples', 'Produce', 0.35, 800),
-		('Chiquita Bannana', 'Produce', 0.20, 10000),
-		('Tropicana Orange Juice', 'Grocery', 4.45, 267),
-		('Horizon Organic Milk', 'Grocery', 4.50, 200),
-		('Charmin Toiler Paper', 'Grocery', 12.99, 575),
-		('Pampers Baby Wipes', 'Children', 1.50, 423),
-		('Yoga Mat', 'Sports', 12.75, 150),
-		('5lb Dumb bell', 'Sports', 7.99, 89),
-		('Tie Dye Shirt', 'Clothing', 5.55, 120),
-		('Nike Shorts', 'Clothing', 17.88, 250),
-		('Fancy Feast Wet Cat Food', 'Pet', 12.50, 163),
+VALUES  
+		('Apple', 'Fruit', 0.35, 200),
+		('Baby Wipes', 'Children', 2.50, 400),
+		('Band Aid', 'Pharmacy', 3.00, 250),
+		('Banana', 'Fruit', 0.25, 100),
+		('Conditioner', 'Cosmetics', 6.00, 300),
+        ("Curtains", "Home", 39.99, 30),
+		('Dumb bell', 'Sports', 9.99, 100),
 		('Ibuprophen', 'Pharmacy', 4.95, 389),
-		('Band Aid', 'Pharmacy', 3.25, 550);
+        ("iPhone X Case", "Electronics", 14.99, 100),
+	    ('Jacket', 'Clothing', 27.99, 30),
+		('Milk', 'Grocery', 2.50, 60),
+		('Orange Juice', 'Grocery', 5.45, 40),
+		('Paper Towels', 'Grocery', 6.25, 100),
+        ('Shampoo', 'Cosmetics', 5.50, 300),
+		('Shorts', 'Clothing', 17.99, 90),
+        ("Tent", "Outdoor", 80.00, 40),
+		('Toiler Paper', 'Grocery', 10.99, 275),
+		('Yoga Mat', 'Sports', 9.75, 25);
